@@ -1,4 +1,4 @@
-'use strict';
+
 
 const fs = require('fs');
 const path = require('path');
@@ -23,6 +23,7 @@ const getClientEnvironment = require('./env');
 const ModuleNotFoundPlugin = require('react-dev-utils/ModuleNotFoundPlugin');
 const ForkTsCheckerWebpackPlugin = require('react-dev-utils/ForkTsCheckerWebpackPlugin');
 const typescriptFormatter = require('react-dev-utils/typescriptFormatter');
+const pkg = require(paths.appPackageJson)
 
 
 // Source maps are resource heavy and can cause out of memory issue for large source files.
@@ -475,6 +476,28 @@ module.exports = function(webpackEnv) {
           {
             inject: true,
             template: paths.appHtml,
+            // 自定义 html 模版中的变量
+            templateParameters: (compilation, assets, pluginOptions) => {
+              let stats;
+              return Object.assign(
+                {
+                  // make stats lazy as it is expensive
+                  get webpack() {
+                    return stats || (stats = compilation.getStats().toJson());
+                  },
+                  compilation: compilation,
+                  webpackConfig: compilation.options,
+                  htmlWebpackPlugin: {
+                    files: assets,
+                    options: pluginOptions
+                  }
+                },
+                {
+                  isEnvProduction,
+                  cdnVersion: pkg.dependencies['seamless-scroll'].substr(1)
+                }
+              );
+            }
           },
           isEnvProduction
             ? {
@@ -601,5 +624,9 @@ module.exports = function(webpackEnv) {
     // Turn off performance processing because we utilize
     // our own hints via the FileSizeReporter
     performance: false,
+    // 生产环境，不从 npm 包引入 
+    externals: isEnvDevelopment ? {} : {
+      'seamless-scroll': 'SeamlessScroll'
+    }
   };
 };

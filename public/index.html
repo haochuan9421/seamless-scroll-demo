@@ -60,6 +60,10 @@
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
+    <!-- 开发环境从 npm 引入，生产环境使用 CDN 链接 -->
+    <% if (isEnvProduction) { %>
+    <script src="https://cdn.jsdelivr.net/npm/seamless-scroll@<%= cdnVersion %>/lib/seamless-scroll.min.js"></script>
+    <% } %>
     <!--
       This HTML file is a template.
       If you open it directly in the browser, you will see an empty page.
