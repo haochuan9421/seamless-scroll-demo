@@ -1,2 +1,74 @@
 .pc-page {
+  // 虽然其中一些样式会被 SeamlessScroll 自动添加，但是初始化这些样式可以让页面在 js 生效前不至于布局错乱
+  .box {
+    height: 400px;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    // 列表
+    ul {
+      li {
+        height: 400px;
+        text-align: center;
+        font-size: 100px;
+        color: #ffffff;
+        user-select: none;
+      }
+    }
+    // 前进后退按钮
+    .btn {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      width: 100px;
+      cursor: pointer;
+      opacity: 0.5;
+      &.pre-btn {
+        left: 0;
+      }
+      &.next-btn {
+        right: 0;
+      }
+      &:hover {
+        opacity: 1;
+      }
+      svg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin: auto;
+      }
+    }
+    // 指示器
+    .dots {
+      position: absolute;
+      right: 0;
+      left: 0;
+      bottom: 0px;
+      z-index: 15;
+      text-align: center;
+      li {
+        display: inline-block;
+        box-sizing: border-box;
+        cursor: pointer;
+        text-indent: -9999px;
+        margin: 0 3px;
+        width: 30px;
+        height: 50px;
+        padding: 23px 0;
+        background-color: #fff;
+        background-clip: content-box;
+        transition: opacity 0.6s ease;
+        opacity: 0.5;
+        &.active {
+          opacity: 1;
+        }
+      }
+    }
+  }
+  .qrcode {
+    text-align: center;
+  }
 }
