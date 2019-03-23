@@ -7,7 +7,7 @@ import PC from './pages/PC';
 class App extends Component {
   render() {
     return (
-      <Router>
+      <Router basename={process.env.PUBLIC_URL}>
         <Switch>
           <Route path='/' exact render={() => <Redirect to={window.screen.width < 1024 ? '/mobile' : '/pc'} />} />
           <Route path='/mobile' exact component={Mobile} />
