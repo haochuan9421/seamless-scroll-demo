@@ -85,8 +85,8 @@ class Mobile extends Component {
   }
   componentWillUnmount() {
     // 销毁插件实例
-    this.bannerScroller.destory();
-    this.newsScroller.destory();
+    this.bannerScroller.destroy();
+    this.newsScroller.destroy();
     // 移除监听器
     window.removeEventListener('resize', this.resizeHandler);
   }

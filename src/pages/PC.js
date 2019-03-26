@@ -55,7 +55,7 @@ class PC extends Component {
   }
   componentWillUnmount() {
     // 销毁插件实例
-    this.scroller.destory();
+    this.scroller.destroy();
     // 移除监听器
     window.removeEventListener('resize', this.resizeHandler);
   }
