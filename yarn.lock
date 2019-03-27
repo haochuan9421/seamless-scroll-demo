@@ -8871,10 +8871,10 @@ scss-tokenizer@^0.2.3:
     js-base64 "^2.1.8"
     source-map "^0.4.2"
 
-seamless-scroll@^1.0.6:
-  version "1.0.6"
-  resolved "https://registry.yarnpkg.com/seamless-scroll/-/seamless-scroll-1.0.6.tgz#3f390862fadeb81038a9ba4828c7569b00c0796d"
-  integrity sha512-BUcKjy/h8rZgM5iQsrQzNnz1t6KkIUlW8KXV/WvZEORbFuruFVEszKIQ1UOnk4OFnIL1Vq5xdG5aeQwcC8Utzg==
+seamless-scroll@^1.0.8:
+  version "1.0.8"
+  resolved "https://registry.yarnpkg.com/seamless-scroll/-/seamless-scroll-1.0.8.tgz#c822d366f51938751a1748c890ba04b65c7ab5fe"
+  integrity sha512-ByglInUFEcNpKnDL8K9g7Sqepd0kYxb1kYeuaipTMJ2/8iwqo1HGw50OpGG+fKdJqlZbHq0oy3BqspzsNi1mxA==
 
 select-hose@^2.0.0:
   version "2.0.0"

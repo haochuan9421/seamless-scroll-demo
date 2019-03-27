@@ -34,7 +34,7 @@ class Mobile extends Component {
       width: document.body.clientWidth, // 容器的宽度，单位 px
       height: 350 * rate, // 容器的高度，单位 px
       delay: 2000, // 每屏停留的时间，单位 ms
-      duration: 800, // 滚动一屏需要的时间，单位 ms
+      duration: 600, // 滚动一屏需要的时间，单位 ms
       activeIndex: 0, // 默认显示的元素在列表中的索引，从 0 开始
       autoPlay: true, // 是否自动开始播放
       prevent: true, // 是否阻止页面滚动
