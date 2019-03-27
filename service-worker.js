@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/seamless-scroll-demo/precache-manifest.d96c041df34bbdb77fb0e99d197bd546.js"
+  "/seamless-scroll-demo/precache-manifest.faafd195bd819986c79a3c5b78721e34.js"
 );
 
 workbox.clientsClaim();
