@@ -16,7 +16,7 @@ self.__precacheManifest = [
     "url": "/seamless-scroll-demo/static/css/main.3e450bd8.chunk.css"
   },
   {
-    "revision": "733cfce674a5c51fad6605967ff6ce3b",
+    "revision": "6e5c8f20ed53bf93fd021dd9676c916e",
     "url": "/seamless-scroll-demo/index.html"
   }
 ];
